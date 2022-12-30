@@ -1,0 +1,5 @@
+flowchart LR
+    id1(View) -- Owns and sends user actions --> id2(Presenter)  id1
+    id3(Router) -. UIKit independent mediator .-> id2(Presenter)
+    id2 -- Owns and asks for updates --> id4(Interactor) -. Notifies .-> id2
+    id4 -. Knows about .-> id5(Entity)
